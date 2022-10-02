@@ -13,6 +13,11 @@
     <button type="button" @click="submitData">Register</button>
   </div>
 </form>
+<hr>
+<h3>List here</h3><button type="button" @click="resutlData">click</button>
+<ul>
+    <li v-for="item in dataList" :key="item.name">{{ item.name }}</li>
+</ul>
 </template>
 
 <script>
@@ -25,12 +30,36 @@ export default {
                 name:'',
                 email:'',
                 password:'',
-            }
+            },
+            file: '',
+            dataList: [],
         }
     },
+    mounted()
+    {
+        this.resutlData();
+    },
     methods:{
+        resutlData()
+        {
+            this.dataList = [
+                {
+                    name:'Helo',
+                    phone: '39393'
+                },
+                {
+                    name:'Helo1',
+                    phone: '56565'
+                },
+                {
+                    name:'Helo2',
+                    phone: '32323'
+                }
+            ]
+        },
         onSelectFile(event)
         {
+            this.file = event.target.files[0];
             console.log(event.target.files[0]);
         },
         submitData()
@@ -39,6 +68,7 @@ export default {
             fd.append('name', this.form.name);
             fd.append('email', this.form.email);
             fd.append('password', this.form.password);
+            fd.append('file', this.file);
 
             console.log(Array.from(fd));
         }
