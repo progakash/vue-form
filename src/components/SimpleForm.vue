@@ -14,13 +14,14 @@
   </div>
 </form>
 <hr>
-<h3>List here</h3><button type="button" @click="resutlData">click</button>
+List here<button type="button" @click="resutlData">click</button>
 <ul>
-    <li v-for="item in dataList" :key="item.name">{{ item.name }}</li>
+    <li v-for="item in dataList" :key="item.name">{{ item.title }}</li>
 </ul>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     name: 'SimpleForm',
     data()
@@ -35,32 +36,32 @@ export default {
             dataList: [],
         }
     },
-    mounted()
+    // mounted()
+    // {
+    //     this.resutlData();
+    // },
+    created()
     {
         this.resutlData();
+        this.testFunc();
     },
     methods:{
-        resutlData()
+        async resutlData()
         {
-            this.dataList = [
-                {
-                    name:'Helo',
-                    phone: '39393'
-                },
-                {
-                    name:'Helo1',
-                    phone: '56565'
-                },
-                {
-                    name:'Helo2',
-                    phone: '32323'
-                }
-            ]
+          const result = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        //    console.log(result.data[0].title);
+           this.dataList = result.data;
+           console.log(result);
+
         },
-        onSelectFile(event)
+        testFunc()
         {
-            this.file = event.target.files[0];
-            console.log(event.target.files[0]);
+            console.log('hello');
+        },
+        onSelectFile($event)
+        {
+            this.file = $event.target.files[0];
+            console.log(this.file.name);
         },
         submitData()
         {
