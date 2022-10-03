@@ -5,6 +5,7 @@
 
 <script>
 export default{
+    inheritAttrs: false,
     name: 'RootInputApp'
 }
 </script>

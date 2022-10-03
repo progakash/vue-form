@@ -12,8 +12,9 @@
 </template>
 
 <script>
-//import root input field 
+//import formgenarate
 import RootInputApp from '../FormGenerate/RootInputApp.vue'
+
 export default {
    name: 'RegisterApp',
    components: {RootInputApp}

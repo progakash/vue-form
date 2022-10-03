@@ -1,29 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import RegisterApp from '../pages/RegisterApp'
-import SimpleFormApp from '../pages/SimpleFormApp'
-import FileUploadApp from '../pages/FileUploadApp'
-import MultilevelFormApp from '../pages/MultilevelFormApp'
+import pages from '../pages'
 
 const routes = [
   {
     path: '/register',
     name: 'register',
-    component: RegisterApp
+    component: pages['RegisterApp']
   },
   {
     path: '/simple',
     name: 'simple',
-    component: SimpleFormApp
+    component: pages['SimpleFormApp']
   },
   {
     path: '/file',
     name: 'file',
-    component: FileUploadApp
+    component: pages['FileUploadApp']
   },
   {
     path: '/multilevel',
     name: 'multilevel',
-    component: MultilevelFormApp
+    component:pages[' MultilevelFormApp']
   }
 ]
 
