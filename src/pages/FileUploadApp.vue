@@ -1,0 +1,9 @@
+<template>
+    <h1>file upload</h1>
+</template>
+
+<script> 
+export default{
+    name: 'FileUploadApp',
+}
+</script>
