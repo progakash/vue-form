@@ -1,4 +1,5 @@
 <template>
+<!-- Child Component :  here props value binding with class -->
 <div style="text-align:center" id="switch-style" @click="changeSwitchValue">
     <span :class="{ 'switch-on':switchValue, 'switch-off':!switchValue}"></span>
 </div>

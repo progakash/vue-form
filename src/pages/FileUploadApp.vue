@@ -1,6 +1,14 @@
 <template>
 <div id="form-body" class="col-md-8 offset-2">
     <h1>My Switch</h1>
+    <!-- Parent Component
+        props name >> switchValue
+        data property >> switchval
+        -----------------------
+        emit method from child component
+        changeSwitchValue which execute inline or method
+        here inline 
+    -->
     <MySwitchApp :switchValue="switchval" @changeSwitchValue="switchval = !switchval"/>
     value: {{ switchval }}
 </div>
