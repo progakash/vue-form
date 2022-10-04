@@ -9,8 +9,15 @@
         changeSwitchValue which execute inline or method
         here inline 
     -->
-    <MySwitchApp :switchValue="switchval" @changeSwitchValue="switchval = !switchval"/>
+    <!-- <MySwitchApp :switchValue="switchval" @changeSwitchValue="switchval = !switchval"/>
     value: {{ switchval }}
+     -->
+    
+    <MySwitchApp v-model="switchValue"/> value: {{ switchValue }}
+    <hr>
+    <MySwitchApp v-model="switchValue1"/> value1: {{ switchValue1 }}
+    <hr>
+    <MySwitchApp v-model="switchValue2"/> value2: {{ switchValue2 }}
 </div>
 </template>
 
@@ -22,7 +29,9 @@ export default{
     data()
     {
         return {
-            switchval : true,
+            switchValue  : true,
+            switchValue1 : false,
+            switchValue2 : true,
         }
     }
 }

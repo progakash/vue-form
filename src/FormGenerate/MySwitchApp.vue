@@ -1,7 +1,7 @@
 <template>
 <!-- Child Component :  here props value binding with class -->
 <div style="text-align:center" id="switch-style" @click="changeSwitchValue">
-    <span :class="{ 'switch-on':switchValue, 'switch-off':!switchValue}"></span>
+    <span :class="{ 'switch-on': modelValue, 'switch-off': !modelValue}"></span>
 </div>
 </template>
 
@@ -9,11 +9,12 @@
 
 export default {
   name: 'MySwitchApp',
-  props: ['switchValue'],
+  props: ["modelValue"],
   methods:{
     changeSwitchValue()
     {
-        this.$emit('changeSwitchValue')
+        console.log(this.modelValue);
+        this.$emit('update:modelValue', !this.modelValue);
     }
   }
 }
