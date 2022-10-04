@@ -1,12 +1,12 @@
 <template>
 <div id="form-body" class="col-md-8 offset-2">
-    <h1>Multi-Level Form</h1>
+    <h1>My Switch</h1>
 </div>
 </template>
 
-<script> 
-export default{
-    name: 'MultilevelFormApp',
+<script>
+export default {
+    name: 'SwitchApp'
 }
 </script>
 <style scoped>

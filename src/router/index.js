@@ -20,7 +20,7 @@ const routes = [
   {
     path: '/multilevel',
     name: 'multilevel',
-    component:pages[' MultilevelFormApp']
+    component: pages[' MultilevelApp']
   }
 ]
 

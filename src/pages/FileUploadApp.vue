@@ -1,12 +1,22 @@
 <template>
 <div id="form-body" class="col-md-8 offset-2">
-    <h1>file upload</h1>
+    <h1>My Switch</h1>
+    <MySwitchApp :switchValue="switchval" @changeSwitchValue="switchval = !switchval"/>
+    value: {{ switchval }}
 </div>
 </template>
 
 <script> 
+import MySwitchApp from '../FormGenerate/MySwitchApp.vue'
 export default{
     name: 'FileUploadApp',
+    components: {MySwitchApp},
+    data()
+    {
+        return {
+            switchval : true,
+        }
+    }
 }
 </script>
 <style scoped>

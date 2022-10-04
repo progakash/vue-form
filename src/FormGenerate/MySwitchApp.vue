@@ -1,0 +1,47 @@
+<template>
+<div style="text-align:center" id="switch-style" @click="changeSwitchValue">
+    <span :class="{ 'switch-on':switchValue, 'switch-off':!switchValue}"></span>
+</div>
+</template>
+
+<script>
+
+export default {
+  name: 'MySwitchApp',
+  props: ['switchValue'],
+  methods:{
+    changeSwitchValue()
+    {
+        this.$emit('changeSwitchValue')
+    }
+  }
+}
+</script>
+
+
+<style scoped>
+/* .switch-inner{
+    background-color:#ccc;
+    width:72px;
+    border-radius: 29px;
+    padding:2px;
+    
+} */
+.switch-off {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.switch-on {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+#switch-style{
+    margin:20px 0px 20px 0px;
+}
+</style>
