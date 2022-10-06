@@ -3,8 +3,8 @@
         <!-- <li><router-link to="/switch-page">My Switch</router-link></li> -->
         <li><router-link to="/register">Register</router-link></li>
         <li><router-link to="/simple">Simple Form</router-link></li>
-        <li><router-link to="/file">My Switch</router-link></li>
-        <li><router-link to="/multilevel">Multi Level Form</router-link></li>
+        <li><router-link to="/switch">My Switch</router-link></li>
+        <li><router-link to="/input">My Input</router-link></li>
     </ul>
     <router-view/>
 </template>

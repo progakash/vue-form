@@ -13,14 +13,14 @@ const routes = [
     component: pages['SimpleFormApp']
   },
   {
-    path: '/file',
-    name: 'file',
-    component: pages['FileUploadApp']
+    path: '/switch',
+    name: 'switch',
+    component: pages['SwitchPageApp']
   },
   {
-    path: '/multilevel',
-    name: 'multilevel',
-    component: pages[' MultilevelApp']
+    path: '/input',
+    name: 'input',
+    component: pages['InputPageApp']
   }
 ]
 

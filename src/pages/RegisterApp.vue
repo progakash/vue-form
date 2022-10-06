@@ -13,7 +13,7 @@
 
 <script>
 //import formgenarate
-import RootInputApp from '../FormGenerate/RootInputApp.vue'
+import RootInputApp from '../FormGenerate/MyInputApp.vue'
 
 export default {
    name: 'RegisterApp',

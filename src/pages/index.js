@@ -1,13 +1,13 @@
 import RegisterApp from '../pages/RegisterApp'
 import SimpleFormApp from '../pages/SimpleFormApp'
-import FileUploadApp from '../pages/FileUploadApp'
-import MultilevelApp from '../pages/MultilevelApp'
+import SwitchPageApp from '../pages/SwitchPageApp'
+import InputPageApp from '../pages/InputPageApp'
 import SwitchApp from '../pages/SwitchApp'
 
 export default{
     RegisterApp,
     SimpleFormApp,
-    FileUploadApp,
-    MultilevelApp,
+    SwitchPageApp,
+    InputPageApp,
     SwitchApp
 }

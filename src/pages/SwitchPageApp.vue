@@ -24,7 +24,7 @@
 <script> 
 import MySwitchApp from '../FormGenerate/MySwitchApp.vue'
 export default{
-    name: 'FileUploadApp',
+    name: 'SwitchPageApp',
     components: {MySwitchApp},
     data()
     {
